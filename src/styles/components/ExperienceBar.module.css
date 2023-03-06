@@ -1,0 +1,33 @@
+.experienceBar {
+  display: flex;
+  align-items: center;
+}
+
+.experienceBar span {
+  font-size: 1rem;
+}
+
+/* o sinal de > pega só um nivel de filho */
+/* "flex: 1" é para ocupar o máximo da largura do container */
+
+.experienceBar > div {  
+   flex: 1;
+   height: 4px;
+   border-radius: 4px;
+   background-color: var(--gray-line);
+   margin: 0 1.5rem;
+   position: relative;
+}
+
+.experienceBar > div > div {
+  /* height de 4 px, porque é o tamanho da barra; */
+  height: 4px;
+  border-radius: 4px;
+  background-color: var(--green);
+}
+
+span.currentExperience {
+  position: absolute;
+  top: 12px;
+  transform: translateX(-50%)
+}
